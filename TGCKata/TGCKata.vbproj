@@ -80,9 +80,11 @@
     <Import Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Card.vb" />
+    <Compile Include="Deck.vb" />
+    <Compile Include="DeckTests.vb" />
     <Compile Include="Player.vb" />
     <Compile Include="PlayerTests.vb" />
-    <Compile Include="UnitTest1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
