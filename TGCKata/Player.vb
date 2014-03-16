@@ -40,4 +40,20 @@
   Public Sub EndTurn()
     Me.Status = PlayerStatus.NotActive
   End Sub
+
+  Public Sub Play(ByVal i As Integer)
+    Dim selectedCard As Card = Me.Hand.FirstOrDefault(Function(c) c.Mana = i)
+
+    If selectedCard Is Nothing Then
+      Throw New ArgumentException("Player does NOT have that card in Hand")
+    End If
+
+    If selectedCard.Mana > Me.Mana Then
+      Throw New ArgumentException("Player does NOT have enough Mana to play that Card")
+    End If
+  End Sub
+
+  Public Sub ReceiveDamage(ByVal damageAmount As Integer)
+    Me.Health -= damageAmount
+  End Sub
 End Class
